@@ -68,3 +68,10 @@ Then we find optimal clusters and cluster centers using **K-Means**. This is ins
 
 
 
+*************** **More to be added** *****************
+
+## References
+1. [KMeans in YOLO](https://lars76.github.io/object-detection/k-means-anchor-boxes/)
+2. [Cards Dataset (Reference)](https://github.com/EdjeElectronics/TensorFlow-Object-Detection-API-Tutorial-Train-Multiple-Objects-Windows-10)
+3. [Advantage & Disadvantage of KMeans](http://playwidtech.blogspot.com/2013/02/k-means-clustering-advantages-and.html)
+4. [Different Clusterring Algorithms](https://towardsdatascience.com/the-5-clustering-algorithms-data-scientists-need-to-know-a36d136ef68)
