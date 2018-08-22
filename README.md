@@ -55,7 +55,7 @@ height_b = scale * base_anchor[1] / sqrt(ar)
 1. Convert the *XML* files to a *csv* file.
 
     ``` xml_to_csv.py``` (modify this file as per your *XML* format)
-2. Open     ```EDA_of_bbox.ipynb ```    jupyter notebook for analysis.
+2. Open     ```EDA_of_bbox.ipynb ```    **jupyter notebook** for analysis.
 
     Here, we convert the image dimension with *_compute_new_static_size()* function. Then we normalize bounding box height and width according to new image dimension. 
 
@@ -64,8 +64,21 @@ Then we find optimal clusters and cluster centers using **K-Means**. This is ins
 ### Experiments
 * Cluster bbox (width, height) on **eucledian** distance metric
 * Cluster bbox (width, height) on **iou** metric (This is prefered as eucledian distance metric will give priority to bigger boxes and minimize their loss)
-* Cluster **AR** and **Scales** of bbox Separately with distance metric.
+  
+  Blue Line - Base Model (cards dataset)
 
+  Pink Line - IOU Cluster Model (cards dataset)
+    
+    ![Precision_iou](images/readme/precision.png)
+    ![F1_iou](images/readme/F1.png)
+* Cluster **AR** and **Scales** of bbox Separately with **eucledian** distance metric.
+ 
+    Blue Line - Base Model (cards dataset)
+
+    Green Line - Cluster Model (cards dataset)
+  
+    ![Precision_a_s](images/readme/precision_a_s.png)
+    ![F1_a_s](images/readme/F1_a_s.png)
 
 
 *************** **More to be added** *****************
