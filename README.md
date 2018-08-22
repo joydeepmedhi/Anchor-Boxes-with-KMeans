@@ -49,7 +49,7 @@ if aspect_ratio = ar
 width_b = scale * sqrt(ar) * base_anchor[0]
 height_b = scale * base_anchor[1] / sqrt(ar)
 ```
-
+---
 ## Analysis of bounding boxes (Training data)
 
 1. Convert the *XML* files to a *csv* file.
@@ -61,28 +61,51 @@ height_b = scale * base_anchor[1] / sqrt(ar)
 
 Then we find optimal clusters and cluster centers using **K-Means**. This is inspired from [YOLO](https://pjreddie.com/darknet/yolo/).
 
+Distribution of Bounding Boxes!
+
+![bbox](images/readme/bbox.png)
+
 ### Experiments
-* Cluster bbox (width, height) on **eucledian** distance metric
-* Cluster bbox (width, height) on **iou** metric (This is prefered as eucledian distance metric will give priority to bigger boxes and minimize their loss)
+
+#### 1
+
+Cluster bbox (width, height) on **eucledian** distance metric
+
+ ![clusters](images/readme/cluster.png)
+
+  
+  Blue Line - Base Model (cards dataset)
+
+  Red Line - Cluster Model (cards dataset)
+  
+  ![precision_eu](images/readme/presicion_eucle.png)
+
+  ![f1_eu](images/readme/F1_eucl.png)
+
+#### 2
+Cluster bbox (width, height) on **iou** metric (This is prefered as eucledian distance metric will give priority to bigger boxes and minimize their loss)
   
   Blue Line - Base Model (cards dataset)
 
   Pink Line - IOU Cluster Model (cards dataset)
     
-    ![Precision_iou](images/readme/precision.png)
-    ![F1_iou](images/readme/F1.png)
-* Cluster **AR** and **Scales** of bbox Separately with **eucledian** distance metric.
+![Precision_iou](images/readme/precision.png)
+![F1_iou](images/readme/F1.png)
+
+#### 3
+  Cluster **AR** and **Scales** of bbox Separately with **eucledian** distance metric.
  
     Blue Line - Base Model (cards dataset)
 
     Green Line - Cluster Model (cards dataset)
   
-    ![Precision_a_s](images/readme/precision_a_s.png)
-    ![F1_a_s](images/readme/F1_a_s.png)
+![Precision_a_s](images/readme/precision_a_s.png)
+![F1_a_s](images/readme/F1_a_s.png)
 
 
 *************** **More to be added** *****************
 
+---
 ## References
 1. [KMeans in YOLO](https://lars76.github.io/object-detection/k-means-anchor-boxes/)
 2. [Cards Dataset (Reference)](https://github.com/EdjeElectronics/TensorFlow-Object-Detection-API-Tutorial-Train-Multiple-Objects-Windows-10)
