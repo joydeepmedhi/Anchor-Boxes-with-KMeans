@@ -40,7 +40,7 @@ This is basically the stride of anchor centers. Generally, we want to visit each
 
 #### scales & aspect_ratios
 
-Aspect Ratio of an anchor box is basically *width/height*. Scales are bigger is the anchor box from base box (i.e. 512 x 512 box is twice as big as 256 x 256).
+Aspect Ratio of an anchor box is basically *width/height*. Scales are bigger as the anchor box are from base box (i.e. 512 x 512 box is twice as big as 256 x 256).
 ```
 if aspect_ratio = ar
    base_anchor = 256 x 256
