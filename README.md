@@ -1,5 +1,7 @@
 # Initial Anchor Boxes Estimation using KMeans Clusterring for Faster-RCNN
 
+[![CodeFactor](https://www.codefactor.io/repository/github/joydeepmedhi/anchor-boxes-with-kmeans/badge)](https://www.codefactor.io/repository/github/joydeepmedhi/anchor-boxes-with-kmeans)
+
 ## Introduction
 Faster-RCNN is one of the **state-of-the-art** object detection algorithms around.
 
